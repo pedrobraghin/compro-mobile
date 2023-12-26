@@ -1,5 +1,5 @@
 import { StyleSheet, StatusBar, Text, View } from 'react-native';
-import Colors from '../../constants/Colors';
+import Colors from '../constants/Colors';
 import { Fragment } from 'react';
 import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
 

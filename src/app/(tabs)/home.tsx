@@ -3,7 +3,7 @@ import { Text, View, useWindowDimensions } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view'
 import { YourListsTab } from '../../pages/home/your-lists';
 import { SupermarketesTab } from '../../pages/home/supermarkets';
-import Colors from '../../../constants/Colors';
+import Colors from '../../constants/Colors';
 
 const renderScene = SceneMap({
   yourLists: YourListsTab,
