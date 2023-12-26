@@ -1,9 +1,9 @@
-import { Text, View } from '../../../components/Themed';
+import { Text, View } from 'react-native';
 
 export default function SearchTab() {
-  return (
-    <View>
-      <Text>Pesquisa</Text>
-    </View>
-  );
+	return (
+		<View>
+			<Text>Pesquisa</Text>
+		</View>
+	);
 }
