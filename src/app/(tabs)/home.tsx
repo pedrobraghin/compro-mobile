@@ -2,15 +2,15 @@ import * as React from 'react';
 import { Text, View, useWindowDimensions } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view'
 import { YourListsTab } from '../../pages/home/your-lists';
-import { SupermarketesTab } from '../../pages/home/supermarkets';
+import { SupermarketsTab } from '../../pages/home/supermarkets';
 import Colors from '../../constants/Colors';
 
 const renderScene = SceneMap({
   yourLists: YourListsTab,
-  supermarkets: SupermarketesTab,
+  supermarkets: SupermarketsTab,
 });
 
-export function HomeTabView() {
+export default function HomeTabView() {
   const layout = useWindowDimensions();
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
@@ -35,12 +35,4 @@ export function HomeTabView() {
       })}
     />
   );
-}
-
-export default function () {
-  return (
-    <View>
-      <Text>Text</Text>
-    </View>
-  )
 }
