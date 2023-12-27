@@ -1,7 +1,7 @@
-import { StyleSheet, StatusBar, Text, View } from 'react-native';
 import Colors from '../constants/Colors';
+
 import { Fragment } from 'react';
-import { StatusBar as ExpoStatusBar } from 'expo-status-bar';
+import { StyleSheet, StatusBar, Text, View } from 'react-native';
 
 export function Header() {
   const currentDate = new Date().toLocaleDateString()

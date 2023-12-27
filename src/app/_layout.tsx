@@ -5,10 +5,11 @@ import {
 	ThemeProvider,
 } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
-import { SplashScreen, Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
+import { Slot, SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
+import { Provider } from 'react-redux';
+import { store } from '../redux';
 
 export {
 	// Catch any errors thrown by the Layout component.
@@ -34,17 +35,19 @@ export default function RootLayout() {
 		if (error) throw error;
 	}, [error]);
 
-	useEffect(() => {
-		if (loaded) {
-			SplashScreen.hideAsync();
-		}
-	}, [loaded]);
-
-	if (!loaded) {
-		return null;
+	if (loaded) {
+		SplashScreen.hideAsync();
 	}
 
-	return <RootLayoutNav />;
+	if (!loaded) {
+		return <Slot />;
+	}
+
+	return (
+		<Provider store={store}>
+			<RootLayoutNav />
+		</Provider>
+	);
 }
 
 function RootLayoutNav() {

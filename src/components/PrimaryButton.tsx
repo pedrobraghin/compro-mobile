@@ -1,6 +1,5 @@
-import { TouchableHighlight, Text } from 'react-native';
 import Colors from '../constants/Colors';
-import { StyledTouchableHighlight } from '../constants/StyledComponents';
+import { Text, TouchableOpacity } from 'react-native';
 
 interface PrimaryButtoProps {
 	onPress?: () => void;
@@ -9,11 +8,11 @@ interface PrimaryButtoProps {
 
 export function PrimaryButton({ onPress, text }: PrimaryButtoProps) {
 	return (
-		<StyledTouchableHighlight
+		<TouchableOpacity
 			onPress={onPress}
 			className="bg-general-darkRed rounded-3xl px-4 py-3 w-56 items-center"
 		>
 			<Text style={{ color: Colors.general.textColor }}>{text}</Text>
-		</StyledTouchableHighlight>
+		</TouchableOpacity>
 	);
 }
