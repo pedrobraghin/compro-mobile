@@ -5,11 +5,9 @@ import { Header } from '../../components/Header';
 export default function TabLayout() {
 
   return (
-    <Tabs
-      initialRouteName="home"
-    >
+    <Tabs>
       <Tabs.Screen
-        name="home"
+        name="index"
         options={{
           header: Header,
           title: 'Início',
