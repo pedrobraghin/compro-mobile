@@ -1,13 +1,12 @@
-import Colors from '../constants/Colors';
-
-import { Fragment } from 'react';
-import { StyleSheet, StatusBar, Text, View } from 'react-native';
+import React from 'react'
+import Colors from '../constants/Colors'
+import { StyleSheet, StatusBar, Text, View } from 'react-native'
 
 export function Header() {
   const currentDate = new Date().toLocaleDateString()
 
   return (
-    <Fragment>
+    <React.Fragment>
       <View style={styles.container}>
         <Text style={styles.title}>
           John Doe
@@ -16,11 +15,11 @@ export function Header() {
           {currentDate}
         </Text>
       </View>
-    </Fragment>
+    </React.Fragment>
   )
 }
 
-const statusBarHeight = StatusBar.currentHeight ?? 0;
+const statusBarHeight = StatusBar.currentHeight ?? 0
 
 const styles = StyleSheet.create({
   container: {
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     backgroundColor: Colors.general.lightRed,
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   title: {
     fontSize: 18,
@@ -38,4 +37,4 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: Colors.general.textBlur
   }
-});
+})

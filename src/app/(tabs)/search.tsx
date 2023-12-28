@@ -1,9 +1,9 @@
-import { Text, View } from 'react-native';
+import { Text, View } from 'react-native'
 
-export default function SearchTab() {
-	return (
+export default function SearchTab () {
+  return (
 		<View>
 			<Text>Pesquisa</Text>
 		</View>
-	);
+  )
 }

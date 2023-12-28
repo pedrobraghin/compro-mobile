@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { Text, View, useWindowDimensions } from 'react-native';
+import * as React from 'react'
+import { useWindowDimensions } from 'react-native'
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view'
-import { YourListsTab } from '../../pages/home/your-lists';
-import { SupermarketsTab } from '../../pages/home/supermarkets';
-import Colors from '../../constants/Colors';
+import { YourListsTab } from '../../pages/home/your-lists'
+import { SupermarketsTab } from '../../pages/home/supermarkets'
+import Colors from '../../constants/Colors'
 
 const renderScene = SceneMap({
   yourLists: YourListsTab,
-  supermarkets: SupermarketsTab,
-});
+  supermarkets: SupermarketsTab
+})
 
 export default function HomeTabView() {
-  const layout = useWindowDimensions();
-  const [index, setIndex] = React.useState(0);
+  const layout = useWindowDimensions()
+  const [index, setIndex] = React.useState(0)
   const [routes] = React.useState([
     { key: 'yourLists', title: 'Suas listas' },
     { key: 'supermarkets', title: 'Supermercados' }
-  ]);
+  ])
 
   return (
     <TabView
@@ -34,5 +34,5 @@ export default function HomeTabView() {
         )
       })}
     />
-  );
+  )
 }

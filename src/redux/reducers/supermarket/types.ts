@@ -1,5 +1,5 @@
-import { ISupermarket } from './../../../@types/supermarket';
+import { type ISupermarket } from './../../../@types/supermarket'
 
 export interface ISupermarketSlice {
-  supermarkets: Array<ISupermarket>;
+  supermarkets: Array<ISupermarket>
 }

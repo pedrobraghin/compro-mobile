@@ -1,8 +1,8 @@
-import { Text, View } from 'react-native';
-import { PrimaryButton } from '../../components';
+import { Text, View } from 'react-native'
+import { PrimaryButton } from '../../components'
 
-export function YourListsTab() {
-	return (
+export function YourListsTab () {
+  return (
 		<View className="flex-1 justify-center space-y-4 items-center">
 			<View
 				id="textArea"
@@ -17,5 +17,5 @@ export function YourListsTab() {
 			</View>
 			<PrimaryButton text="Cadastrar nova lista" />
 		</View>
-	);
+  )
 }
