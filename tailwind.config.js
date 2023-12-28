@@ -22,7 +22,8 @@ module.exports = {
           darkRed: '#8D060C',
           yellow: '#FFDA00',
           textBlur: '#F4F4F4',
-          textColor: '#ffffff'
+          textColor: '#ffffff',
+          darkGray: '#252525'
         }
       }
     },
