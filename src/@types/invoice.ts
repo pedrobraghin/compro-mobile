@@ -3,8 +3,8 @@ export interface IInvoice {
 }
 
 export interface IRecentInvoice {
+  id: string
   date: Date
-  name: string
   products: number
   value: number
 }
